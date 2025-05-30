@@ -27,7 +27,7 @@ const skillCategories: SkillCategory[] = [
   {
     id: 'cloud-db-tech',
     name: 'Nube, BD y Tecnologías',
-    skills: ['Firebase', 'Google Cloud'],
+    skills: ['Firebase', 'Google Cloud', 'Supabase', 'Netlify', 'Cloudflare'],
     Icon: CloudCog,
   },
 ];
