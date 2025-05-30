@@ -7,11 +7,12 @@ import { Button } from '@/components/ui/button';
 const PersonalBio = () => {
   const name = "Christopher Alejandro Maldonado Chavez";
   const description = "Un apasionado desarrollador de software con experiencia en desarrollo móvil y multiplataforma. Siempre ansioso por aprender nuevas tecnologías y construir soluciones innovadoras que resuelvan problemas del mundo real. Entusiasta por crear aplicaciones limpias, eficientes y fáciles de usar.";
+  const emailAddress = "christopher@override.com.mx";
 
   const contacts = [
     {
       name: 'Email',
-      href: 'mailto:christopher@override.com.mx', 
+      href: `mailto:${emailAddress}`, 
       icon: Mail,
       ariaLabel: 'Enviar un correo electrónico a Christopher',
     },
@@ -58,6 +59,11 @@ const PersonalBio = () => {
               </a>
             </Button>
           ))}
+        </div>
+        <div className="mt-12 text-center">
+          <p className="text-md text-muted-foreground">
+            Contacto directo: <a href={`mailto:${emailAddress}`} className="text-accent hover:underline hover:text-accent/80 transition-colors duration-300">{emailAddress}</a>
+          </p>
         </div>
       </div>
     </section>
