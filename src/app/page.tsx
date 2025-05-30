@@ -8,7 +8,7 @@ import ToolsSection from '@/components/sections/ToolsSection';
 import type { Project } from '@/components/shared/ProjectCard';
 import { 
   Briefcase, Lightbulb, Globe, 
-  Waves, Puzzle, ToyBrick, Palette, Flame, Heart, Paintbrush, TrendingUp, Users, BookOpen, Scale
+  Waves, Puzzle, ToyBrick, Palette, Flame, Heart, Paintbrush, TrendingUp, BookOpen, Scale
 } from 'lucide-react';
 
 // Datos de Proyectos (en español)
@@ -18,7 +18,7 @@ const showcaseProjects: Project[] = [
     name: 'Quickness',
     description: 'Aplicación de gestión de accesos desarrollada para Override. Responsable del frontend con Compose Multiplatform (Android/iOS), implementando arquitectura MVVM, multimodularidad, Clean Architecture y modelo de capas. Se utilizaron tecnologías como Ktor, Koin, Coil, Room, DataStore, KSP, Moko Permissions, Biometric y Firebase (Auth, Firestore, Cloud Run Functions).',
     technologies: ['Compose Multiplatform', 'Kotlin', 'Ktor', 'Firebase', 'Clean Architecture', 'MVVM'],
-    Icon: Users,
+    Icon: 'https://override.com.mx/SRC/IMG/logo/LogoQuicknessQC.svg', // Updated Icon
   },
   {
     id: 'calabozos',

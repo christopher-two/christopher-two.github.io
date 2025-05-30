@@ -8,7 +8,7 @@ export interface Project {
   name: string;
   description: string;
   technologies: string[];
-  Icon?: LucideIcon;
+  Icon?: LucideIcon | string; // Allow string for image URLs
 }
 
 interface ProjectCardProps {
@@ -21,7 +21,13 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
     <Card className="flex flex-col h-full bg-card shadow-lg hover:shadow-accent/10 transition-shadow duration-300 rounded-lg overflow-hidden border border-border">
       <CardHeader className="pb-4">
         <div className="flex items-start gap-4">
-          {Icon && <Icon className="w-8 h-8 text-accent flex-shrink-0 mt-1" />}
+          {Icon && (
+            typeof Icon === 'string' ? (
+              <img src={Icon} alt={`${name} logo`} className="w-8 h-8 flex-shrink-0 mt-1" />
+            ) : (
+              <Icon className="w-8 h-8 text-accent flex-shrink-0 mt-1" />
+            )
+          )}
           <CardTitle className="text-2xl font-semibold text-foreground">{name}</CardTitle>
         </div>
       </CardHeader>
