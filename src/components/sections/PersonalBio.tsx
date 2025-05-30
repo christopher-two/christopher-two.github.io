@@ -51,7 +51,7 @@ const PersonalBio = () => {
       <div className="container mx-auto px-4 md:px-6 text-center">
         <Avatar className="w-36 h-36 md:w-40 md:h-40 mx-auto mb-8 border-4 border-primary shadow-xl rounded-full">
           <AvatarImage 
-            src="https://placehold.co/200x200.png" 
+            src="https://instagram.fupn2-1.fna.fbcdn.net/v/t51.2885-15/501453106_18358317934196019_2648593349155852653_n.jpg?stp=dst-jpegr_e35_tt6&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0uaW1hZ2VfdXJsZ2VuLjE0NDB4MTA4MC5oZHIuZjc1NzYxLmRlZmF1bHRfaW1hZ2UifQ&_nc_ht=instagram.fupn2-1.fna.fbcdn.net&_nc_cat=103&_nc_oc=Q6cZ2QGfcw_DvdUVn8TeBQFyAjKEddqPKTbK-tdyrrr5WnpExt4EzYBTaBr4MfO7E9UD_0OmSm_eDAw5J6uYug18QvkZ&_nc_ohc=l1KfWMjO3EAQ7kNvwFnmPxM&_nc_gid=Y9oGxH7MTVWmK3880CNJGw&edm=APs17CUBAAAA&ccb=7-5&ig_cache_key=MzY0MzU2OTc2OTk2NTQ1NTk1Nw%3D%3D.3-ccb7-5&oh=00_AfLmwRMDrzK2J8Jz4gO2b4E8gWri-5ibdheeSK0tjtmj5A&oe=683EF122&_nc_sid=10d13b" 
             alt={name} 
             data-ai-hint="professional portrait"
             className="rounded-full"
