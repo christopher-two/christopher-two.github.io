@@ -4,10 +4,15 @@ import { Badge } from '@/components/ui/badge';
 import { Code2, Layers3, CloudCog, Cog } from 'lucide-react';
 import type React from 'react';
 
+interface Skill {
+  name: string;
+  url: string;
+}
+
 interface SkillCategory {
   id: string;
   name: string; // Nombres de categoría traducidos
-  skills: string[];
+  skills: Skill[];
   Icon: React.ElementType;
 }
 
@@ -15,19 +20,35 @@ const skillCategories: SkillCategory[] = [
   {
     id: 'languages',
     name: 'Lenguajes',
-    skills: ['Kotlin', 'Java', 'SQL'],
+    skills: [
+      { name: 'Kotlin', url: 'https://kotlinlang.org/' },
+      { name: 'Java', url: 'https://www.oracle.com/java/' },
+      { name: 'SQL', url: 'https://en.wikipedia.org/wiki/SQL' },
+    ],
     Icon: Code2,
   },
   {
     id: 'frameworks-platforms',
     name: 'Frameworks y Plataformas',
-    skills: ['Compose Multiplatform', 'Kotlin Multiplatform', 'Jetpack Compose', 'Ktor', 'Android'],
+    skills: [
+      { name: 'Compose Multiplatform', url: 'https://www.jetbrains.com/compose-multiplatform/' },
+      { name: 'Kotlin Multiplatform', url: 'https://kotlinlang.org/lp/multiplatform/' },
+      { name: 'Jetpack Compose', url: 'https://developer.android.com/jetpack/compose' },
+      { name: 'Ktor', url: 'https://ktor.io/' },
+      { name: 'Android', url: 'https://developer.android.com/' },
+    ],
     Icon: Layers3,
   },
   {
     id: 'cloud-db-tech',
     name: 'Nube, BD y Tecnologías',
-    skills: ['Firebase', 'Google Cloud', 'Supabase', 'Netlify', 'Cloudflare'],
+    skills: [
+      { name: 'Firebase', url: 'https://firebase.google.com/' },
+      { name: 'Google Cloud', url: 'https://cloud.google.com/' },
+      { name: 'Supabase', url: 'https://supabase.com/' },
+      { name: 'Netlify', url: 'https://www.netlify.com/' },
+      { name: 'Cloudflare', url: 'https://www.cloudflare.com/' },
+    ],
     Icon: CloudCog,
   },
 ];
@@ -51,9 +72,18 @@ const SkillsSection = () => {
               <CardContent className="flex-grow">
                 <div className="flex flex-wrap gap-2">
                   {category.skills.map((skill) => (
-                     <Badge key={skill} variant="outline" className="border-primary/50 text-primary-foreground bg-primary/20 hover:bg-primary/30 transition-colors text-sm px-3 py-1">
-                      {skill}
-                    </Badge>
+                    <a 
+                      key={skill.name} 
+                      href={skill.url} 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-card rounded-full"
+                      aria-label={`Más información sobre ${skill.name}`}
+                    >
+                      <Badge variant="outline" className="border-primary/50 text-primary-foreground bg-primary/20 hover:bg-primary/30 transition-colors text-sm px-3 py-1 cursor-pointer">
+                        {skill.name}
+                      </Badge>
+                    </a>
                   ))}
                 </div>
               </CardContent>
