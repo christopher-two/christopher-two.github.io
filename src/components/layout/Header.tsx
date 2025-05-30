@@ -3,9 +3,15 @@
 
 import Link from 'next/link';
 import { useState } from 'react';
-import { Menu, X } from 'lucide-react'; // Import X for close button
+import { Menu, X, Globe } from 'lucide-react'; 
 import { Button } from '@/components/ui/button';
-import { Sheet, SheetContent, SheetTrigger, SheetClose } from '@/components/ui/sheet';
+import { Sheet, SheetContent, SheetTrigger, SheetClose, SheetTitle } from '@/components/ui/sheet'; // Added SheetTitle
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from '@/components/ui/dropdown-menu';
 
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -30,7 +36,7 @@ const Header = () => {
         </Link>
         
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex space-x-6">
+        <nav className="hidden md:flex space-x-6 items-center">
           {navLinks.map((link) => (
             <Link 
               key={link.href} 
@@ -52,6 +58,7 @@ const Header = () => {
               </Button>
             </SheetTrigger>
             <SheetContent side="right" className="w-[280px] sm:w-[320px] bg-card border-border p-6">
+              <SheetTitle className="sr-only">Menú Principal</SheetTitle>
               <div className="flex justify-between items-center mb-8">
                  <Link href="/" className="flex items-center gap-2 text-xl font-bold text-foreground hover:text-accent transition-colors duration-300" onClick={() => setIsMobileMenuOpen(false)}>
                     <img 
