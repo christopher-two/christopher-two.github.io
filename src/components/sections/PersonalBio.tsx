@@ -11,7 +11,7 @@ const PersonalBio = () => {
   const contacts = [
     {
       name: 'Email',
-      href: 'mailto:christopher.maldonado.chavez@example.com', // Placeholder - Reemplazar con tu email real
+      href: 'mailto:christopher@override.com.mx', 
       icon: Mail,
       ariaLabel: 'Enviar un correo electrónico a Christopher',
     },
