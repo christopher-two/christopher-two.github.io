@@ -7,8 +7,8 @@ import SkillsSection from '@/components/sections/SkillsSection';
 import ToolsSection from '@/components/sections/ToolsSection';
 import type { Project } from '@/components/shared/ProjectCard';
 import { 
-  Briefcase, Lightbulb, Globe
-} from 'lucide-react'; // Icons for SectionIcon remain, project-specific icons removed
+  Lightbulb, Globe // Briefcase removed as it's replaced by URL
+} from 'lucide-react'; 
 
 // Datos de Proyectos (en español)
 const showcaseProjects: Project[] = [
@@ -63,7 +63,7 @@ const learningProjects: Project[] = [
     name: 'SquidGame',
     description: 'Proyecto inspirado en "El Juego del Calamar". Consta de una app de control para participantes (Compose Multiplatform para Wasm/Desktop) y una app para jugadores (Jetpack Compose para Android). Se exploraron tecnologías como Koin, Ktor, Firebase Realtime Database, Firebase Firestore y Coil.',
     technologies: ['Compose Multiplatform', 'Jetpack Compose', 'Kotlin', 'Firebase', 'Ktor', 'Koin'],
-    Icon: 'ToyBrick', // Changed to string name
+    Icon: 'ToyBrick', 
     imageUrls: [
       'https://placehold.co/800x450.png',
     ],
@@ -76,7 +76,7 @@ const learningProjects: Project[] = [
     name: 'Adivina el color RGB',
     description: 'Mini-juego desarrollado en Compose Multiplatform para Desktop. El objetivo es adivinar un color RGB, sirviendo como práctica para el manejo de colores en el framework.',
     technologies: ['Compose Multiplatform', 'Kotlin', 'Desktop'],
-    Icon: 'Palette', // Changed to string name
+    Icon: 'Palette', 
     imageUrls: [
       'https://placehold.co/800x450.png',
     ],
@@ -89,7 +89,7 @@ const learningProjects: Project[] = [
     name: 'Dragon Matches',
     description: 'Aplicación inspirada en Tinder con temática de Dragon Ball, desarrollada en Jetpack Compose. Se exploraron tecnologías como Ktor, Koin y Coil, y se aplicó la arquitectura MVVM. Sirvió para practicar el consumo de APIs y animaciones de drag & drop.',
     technologies: ['Jetpack Compose', 'Kotlin', 'Ktor', 'Koin', 'MVVM', 'Android'],
-    Icon: 'Flame', // Changed to string name
+    Icon: 'Flame', 
     imageUrls: [
       'https://placehold.co/800x450.png',
       'https://placehold.co/800x450.png',
@@ -107,7 +107,7 @@ const webProjects: Project[] = [
     name: 'Dany<3',
     description: 'Página web personal desarrollada con cariño, enfocada en un diseño moderno y una experiencia de usuario atractiva para mi novia.',
     technologies: ['HTML5', 'CSS3', 'JavaScript'],
-    Icon: 'Heart', // Changed to string name
+    Icon: 'Heart', 
     imageUrls: [
       'https://placehold.co/800x450.png',
     ],
@@ -120,7 +120,7 @@ const webProjects: Project[] = [
     name: 'EikoColors',
     description: 'Herramienta web en desarrollo para una empresa de diseño gráfico, destinada a la exploración y gestión de paletas de colores.',
     technologies: ['React', 'Tailwind CSS', 'Next.js'],
-    Icon: 'Paintbrush', // Changed to string name
+    Icon: 'Paintbrush', 
     imageUrls: [
       'https://placehold.co/800x450.png',
     ],
@@ -133,7 +133,7 @@ const webProjects: Project[] = [
     name: 'Asian Growth Timeline',
     description: 'Proyecto escolar vendido a un estudiante: una línea de tiempo interactiva que visualiza datos históricos sobre el crecimiento económico y social en países asiáticos.',
     technologies: ['Vue.js', 'D3.js', 'Data Visualization'],
-    Icon: 'TrendingUp', // Changed to string name
+    Icon: 'TrendingUp', 
     imageUrls: [
       'https://placehold.co/800x450.png',
     ],
@@ -149,9 +149,24 @@ export default function Home() {
       <Header />
       <main className="flex-grow">
         <PersonalBio />
-        <ProjectsSection title="Proyectos Destacados" projects={showcaseProjects} SectionIcon={Briefcase} bgColorClass="bg-card" />
-        <ProjectsSection title="Proyectos de Aprendizaje" projects={learningProjects} SectionIcon={Lightbulb} bgColorClass="bg-background" />
-        <ProjectsSection title="Proyectos Web" projects={webProjects} SectionIcon={Globe} bgColorClass="bg-card" />
+        <ProjectsSection 
+          title="Proyectos Destacados" 
+          projects={showcaseProjects} 
+          SectionIcon="https://override.com.mx/SRC/IMG/logo/Overridelogo.svg" 
+          bgColorClass="bg-card" 
+        />
+        <ProjectsSection 
+          title="Proyectos de Aprendizaje" 
+          projects={learningProjects} 
+          SectionIcon={Lightbulb} 
+          bgColorClass="bg-background" 
+        />
+        <ProjectsSection 
+          title="Proyectos Web" 
+          projects={webProjects} 
+          SectionIcon={Globe} 
+          bgColorClass="bg-card" 
+        />
         <SkillsSection /> {/* bg-background por defecto */}
         <ToolsSection /> {/* bg-card por defecto */}
       </main>
