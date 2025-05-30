@@ -26,7 +26,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="es" suppressHydrationWarning> {/* Eliminada la clase 'dark' y añadido suppressHydrationWarning */}
+    // Eliminada la clase 'dark' y añadido suppressHydrationWarning para el ThemeProvider
+    <html lang="es" suppressHydrationWarning>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased bg-background text-foreground flex flex-col min-h-screen`}>
         <ThemeProvider
             attribute="class"
