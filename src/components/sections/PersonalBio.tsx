@@ -17,7 +17,7 @@ const PersonalBio = () => {
     },
     {
       name: 'LinkedIn',
-      href: 'https://www.linkedin.com/in/christopher-alejandro-maldonado-chavez', // Placeholder - Reemplazar con tu perfil real
+      href: 'https://www.linkedin.com/in/christopher-alejandro-maldonado-chavez/', 
       icon: Linkedin,
       ariaLabel: 'Visitar el perfil de LinkedIn de Christopher',
     },
