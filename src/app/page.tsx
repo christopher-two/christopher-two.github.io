@@ -8,7 +8,7 @@ import ToolsSection from '@/components/sections/ToolsSection';
 import type { Project } from '@/components/shared/ProjectCard';
 import { 
   Briefcase, Lightbulb, Globe, 
-  Waves, Puzzle, ToyBrick, Palette, Flame, Heart, Paintbrush, TrendingUp, BookOpen, Scale
+  Waves, Puzzle, ToyBrick, Palette, Flame, Heart, Paintbrush, TrendingUp, BookOpen
 } from 'lucide-react';
 
 // Datos de Proyectos (en español)
@@ -25,14 +25,14 @@ const showcaseProjects: Project[] = [
     name: 'Calabozos y compuertas',
     description: 'Libro interactivo desarrollado para Override utilizando Compose Multiplatform. Se aplicaron arquitecturas multimodular, modelo de capas, MVVM y Clean Architecture, con tecnologías como Koin, Coil y Supabase.',
     technologies: ['Compose Multiplatform', 'Kotlin', 'Supabase', 'Koin', 'Clean Architecture'],
-    Icon: 'https://override.com.mx/SRC/IMG/logo/Logo%20Odin.svg', // Updated Icon
+    Icon: 'https://override.com.mx/SRC/IMG/logo/Logo%20Odin.svg',
   },
   {
     id: 'lyra',
     name: 'Lyra',
     description: 'Aplicación de nutrición en desarrollo, enfocada exclusivamente en Jetpack Compose para Android. Explora funcionalidades para el seguimiento y planificación nutricional.',
     technologies: ['Jetpack Compose', 'Kotlin', 'Android'],
-    Icon: Scale,
+    Icon: 'https://override.com.mx/SRC/IMG/logo/Logo%20Gaia%20SB.svg', // Updated Icon
   },
 ];
 
