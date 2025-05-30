@@ -1,3 +1,4 @@
+
 import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Code2, Layers3, CloudCog, Cog } from 'lucide-react';
@@ -5,7 +6,7 @@ import type React from 'react';
 
 interface SkillCategory {
   id: string;
-  name: string;
+  name: string; // Nombres de categoría traducidos
   skills: string[];
   Icon: React.ElementType;
 }
@@ -13,19 +14,19 @@ interface SkillCategory {
 const skillCategories: SkillCategory[] = [
   {
     id: 'languages',
-    name: 'Languages',
+    name: 'Lenguajes',
     skills: ['Kotlin', 'Java', 'SQL'],
     Icon: Code2,
   },
   {
     id: 'frameworks-platforms',
-    name: 'Frameworks & Platforms',
+    name: 'Frameworks y Plataformas',
     skills: ['Compose Multiplatform', 'Kotlin Multiplatform', 'Jetpack Compose', 'Ktor', 'Android'],
     Icon: Layers3,
   },
   {
     id: 'cloud-db-tech',
-    name: 'Cloud, DB & Technologies',
+    name: 'Nube, BD y Tecnologías',
     skills: ['Firebase', 'Google Cloud'],
     Icon: CloudCog,
   },
@@ -37,7 +38,8 @@ const SkillsSection = () => {
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex items-center gap-4 mb-12 md:mb-16 justify-center">
           <Cog className="w-10 h-10 md:w-12 md:h-12 text-accent" />
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center text-foreground tracking-tight">Skills</h2>
+          {/* Título de sección traducido */}
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center text-foreground tracking-tight">Habilidades</h2>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {skillCategories.map((category) => (

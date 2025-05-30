@@ -1,24 +1,16 @@
-import Link from 'next/link';
-import { Aperture, Globe } from 'lucide-react'; // Using a generic, abstract icon
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
-import { Button } from "@/components/ui/button";
 
-const languages = [
-  { code: 'en', name: 'English' },
-  { code: 'es', name: 'Español' },
-  { code: 'de', name: 'Deutsch' },
-  { code: 'zh', name: '中文' },
-  { code: 'ja', name: '日本語' },
-  { code: 'ko', name: '한국어' },
-  { code: 'pt', name: 'Português' },
-  { code: 'sl', name: 'Slovenščina' },
-  { code: 'la', name: 'Latina' },
-];
+'use client'; // Mantenido como Client Component si se necesitan otras interacciones a futuro
+
+import Link from 'next/link';
+import { Aperture } from 'lucide-react'; // Eliminado Globe si no se usa más
+// Eliminadas las importaciones de DropdownMenu si ya no se usa el selector de idioma
+// import {
+//   DropdownMenu,
+//   DropdownMenuContent,
+//   DropdownMenuItem,
+//   DropdownMenuTrigger,
+// } from "@/components/ui/dropdown-menu";
+// import { Button } from "@/components/ui/button";
 
 const Header = () => {
   return (
@@ -30,29 +22,13 @@ const Header = () => {
         </Link>
         
         <div className="flex items-center gap-4">
-          {/* Optional Navigation Links Can Go Here */}
+          {/* Ya no hay selector de idioma */}
           {/* <nav className="hidden md:flex space-x-6">
             <Link href="#bio" className="text-muted-foreground hover:text-accent transition-colors">Bio</Link>
-            <Link href="#projects" className="text-muted-foreground hover:text-accent transition-colors">Projects</Link>
-            <Link href="#skills" className="text-muted-foreground hover:text-accent transition-colors">Skills</Link>
-            <Link href="#tools" className="text-muted-foreground hover:text-accent transition-colors">Tools</Link>
+            <Link href="#projects" className="text-muted-foreground hover:text-accent transition-colors">Proyectos</Link>
+            <Link href="#skills" className="text-muted-foreground hover:text-accent transition-colors">Habilidades</Link>
+            <Link href="#tools" className="text-muted-foreground hover:text-accent transition-colors">Herramientas</Link>
           </nav> */}
-
-          <DropdownMenu>
-            <DropdownMenuTrigger asChild>
-              <Button variant="outline" size="icon" className="h-9 w-9">
-                <Globe className="h-4 w-4" />
-                <span className="sr-only">Select language</span>
-              </Button>
-            </DropdownMenuTrigger>
-            <DropdownMenuContent align="end">
-              {languages.map((lang) => (
-                <DropdownMenuItem key={lang.code} onClick={() => console.log(`Language selected: ${lang.name}`)}>
-                  {lang.name}
-                </DropdownMenuItem>
-              ))}
-            </DropdownMenuContent>
-          </DropdownMenu>
         </div>
       </div>
     </header>

@@ -1,3 +1,4 @@
+
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import PersonalBio from '@/components/sections/PersonalBio';
@@ -10,28 +11,28 @@ import {
   Waves, Puzzle, ToyBrick, Palette, Flame, Heart, Paintbrush, TrendingUp, Users, BookOpen, Scale
 } from 'lucide-react';
 
-// Project Data
+// Datos de Proyectos (en español)
 const showcaseProjects: Project[] = [
   {
     id: 'quickness',
     name: 'Quickness',
     description: 'Aplicación de gestión de accesos desarrollada para Override. Responsable del frontend con Compose Multiplatform (Android/iOS), implementando arquitectura MVVM, multimodularidad, Clean Architecture y modelo de capas. Se utilizaron tecnologías como Ktor, Koin, Coil, Room, DataStore, KSP, Moko Permissions, Biometric y Firebase (Auth, Firestore, Cloud Run Functions).',
     technologies: ['Compose Multiplatform', 'Kotlin', 'Ktor', 'Firebase', 'Clean Architecture', 'MVVM'],
-    Icon: Users, // Changed from Briefcase to a more relevant icon for access management
+    Icon: Users,
   },
   {
     id: 'calabozos',
     name: 'Calabozos y compuertas',
     description: 'Libro interactivo desarrollado para Override utilizando Compose Multiplatform. Se aplicaron arquitecturas multimodular, modelo de capas, MVVM y Clean Architecture, con tecnologías como Koin, Coil y Supabase.',
     technologies: ['Compose Multiplatform', 'Kotlin', 'Supabase', 'Koin', 'Clean Architecture'],
-    Icon: BookOpen, // Changed from Puzzle to a more relevant icon for an interactive book
+    Icon: BookOpen,
   },
   {
     id: 'lyra',
     name: 'Lyra',
     description: 'Aplicación de nutrición en desarrollo, enfocada exclusivamente en Jetpack Compose para Android. Explora funcionalidades para el seguimiento y planificación nutricional.',
     technologies: ['Jetpack Compose', 'Kotlin', 'Android'],
-    Icon: Scale, // Changed from Waves to a more relevant icon for nutrition
+    Icon: Scale,
   },
 ];
 
@@ -71,14 +72,14 @@ const webProjects: Project[] = [
     id: 'eikocolors',
     name: 'EikoColors',
     description: 'Herramienta web en desarrollo para una empresa de diseño gráfico, destinada a la exploración y gestión de paletas de colores.',
-    technologies: ['React', 'Tailwind CSS', 'Next.js'], // Assuming modern stack
+    technologies: ['React', 'Tailwind CSS', 'Next.js'],
     Icon: Paintbrush,
   },
   {
     id: 'asian_growth',
     name: 'Asian Growth Timeline',
     description: 'Proyecto escolar vendido a un estudiante: una línea de tiempo interactiva que visualiza datos históricos sobre el crecimiento económico y social en países asiáticos.',
-    technologies: ['Vue.js', 'D3.js', 'Data Visualization'], // Assuming relevant tech
+    technologies: ['Vue.js', 'D3.js', 'Data Visualization'],
     Icon: TrendingUp,
   },
 ];
@@ -89,11 +90,12 @@ export default function Home() {
       <Header />
       <main className="flex-grow">
         <PersonalBio />
-        <ProjectsSection title="Project Showcase" projects={showcaseProjects} SectionIcon={Briefcase} bgColorClass="bg-card" />
-        <ProjectsSection title="Learning Projects" projects={learningProjects} SectionIcon={Lightbulb} bgColorClass="bg-background" />
-        <ProjectsSection title="Web Projects" projects={webProjects} SectionIcon={Globe} bgColorClass="bg-card" />
-        <SkillsSection /> {/* Defaults to bg-background */}
-        <ToolsSection /> {/* Defaults to bg-card */}
+        {/* Títulos de sección traducidos */}
+        <ProjectsSection title="Proyectos Destacados" projects={showcaseProjects} SectionIcon={Briefcase} bgColorClass="bg-card" />
+        <ProjectsSection title="Proyectos de Aprendizaje" projects={learningProjects} SectionIcon={Lightbulb} bgColorClass="bg-background" />
+        <ProjectsSection title="Proyectos Web" projects={webProjects} SectionIcon={Globe} bgColorClass="bg-card" />
+        <SkillsSection /> {/* bg-background por defecto */}
+        <ToolsSection /> {/* bg-card por defecto */}
       </main>
       <Footer />
     </>

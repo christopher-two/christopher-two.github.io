@@ -1,3 +1,4 @@
+
 import { Package, Send, Figma, GitFork, PenTool, Terminal, Wrench } from 'lucide-react';
 import type React from 'react';
 
@@ -22,7 +23,8 @@ const ToolsSection = () => {
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex items-center gap-4 mb-12 md:mb-16 justify-center">
           <Wrench className="w-10 h-10 md:w-12 md:h-12 text-accent" />
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center text-foreground tracking-tight">Tools Proficiency</h2>
+          {/* Título de sección traducido */}
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center text-foreground tracking-tight">Competencia en Herramientas</h2>
         </div>
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 md:gap-8 text-center">
           {tools.map((tool) => (

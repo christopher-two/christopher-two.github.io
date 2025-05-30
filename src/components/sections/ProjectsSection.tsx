@@ -1,3 +1,4 @@
+
 import ProjectCard from '@/components/shared/ProjectCard';
 import type { Project } from '@/components/shared/ProjectCard';
 import type { LucideIcon } from 'lucide-react';
@@ -6,7 +7,7 @@ interface ProjectsSectionProps {
   title: string;
   projects: Project[];
   SectionIcon: LucideIcon;
-  bgColorClass?: string; // Optional background class for alternating sections
+  bgColorClass?: string; // Clase de fondo opcional para alternar secciones
 }
 
 const ProjectsSection: React.FC<ProjectsSectionProps> = ({ title, projects, SectionIcon, bgColorClass = 'bg-card' }) => {
@@ -24,7 +25,7 @@ const ProjectsSection: React.FC<ProjectsSectionProps> = ({ title, projects, Sect
             ))}
           </div>
         ) : (
-          <p className="text-center text-muted-foreground text-lg">More projects coming soon!</p>
+          <p className="text-center text-muted-foreground text-lg">¡Más proyectos próximamente!</p>
         )}
       </div>
     </section>

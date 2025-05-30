@@ -15,8 +15,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: 'Christopher-Two | Portfolio',
-  description: 'Personal portfolio of Christopher Alejandro Maldonado Chavez, showcasing projects and skills in a Last of Us inspired theme.',
+  title: 'Christopher-Two | Portafolio',
+  description: 'Portafolio personal de Christopher Alejandro Maldonado Chavez, mostrando proyectos y habilidades en una temática inspirada en The Last of Us.',
 };
 
 export default function RootLayout({
@@ -25,8 +25,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="dark">
-      {/* The 'dark' className on the <html> tag enforces the dark theme globally. */}
+    // Cambiado lang a "es" para español
+    <html lang="es" className="dark">
+      {/* La clase 'dark' en la etiqueta <html> fuerza el tema oscuro globalmente. */}
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased bg-background text-foreground flex flex-col min-h-screen`}>
         {children}
         <Toaster />
