@@ -7,7 +7,7 @@ import ToolsSection from '@/components/sections/ToolsSection';
 import type { Project } from '@/components/shared/ProjectCard';
 import { 
   Briefcase, Lightbulb, Globe, 
-  Waves, Puzzle, ToyBrick, Palette, Flame, Heart, Paintbrush, TrendingUp 
+  Waves, Puzzle, ToyBrick, Palette, Flame, Heart, Paintbrush, TrendingUp, Users, BookOpen, Scale
 } from 'lucide-react';
 
 // Project Data
@@ -15,23 +15,23 @@ const showcaseProjects: Project[] = [
   {
     id: 'quickness',
     name: 'Quickness',
-    description: 'A high-performance solution for fast-paced environments, focusing on efficiency and responsiveness.',
-    technologies: ['Kotlin', 'Compose Multiplatform', 'Ktor', 'Coroutines'],
-    Icon: Briefcase,
+    description: 'Aplicación de gestión de accesos desarrollada para Override. Responsable del frontend con Compose Multiplatform (Android/iOS), implementando arquitectura MVVM, multimodularidad, Clean Architecture y modelo de capas. Se utilizaron tecnologías como Ktor, Koin, Coil, Room, DataStore, KSP, Moko Permissions, Biometric y Firebase (Auth, Firestore, Cloud Run Functions).',
+    technologies: ['Compose Multiplatform', 'Kotlin', 'Ktor', 'Firebase', 'Clean Architecture', 'MVVM'],
+    Icon: Users, // Changed from Briefcase to a more relevant icon for access management
   },
   {
     id: 'calabozos',
     name: 'Calabozos y compuertas',
-    description: 'An engaging game project exploring complex logic, procedural generation, and user interaction within a dungeon-crawler theme.',
-    technologies: ['Java', 'Custom Game Engine', 'AI Algorithms'],
-    Icon: Puzzle,
+    description: 'Libro interactivo desarrollado para Override utilizando Compose Multiplatform. Se aplicaron arquitecturas multimodular, modelo de capas, MVVM y Clean Architecture, con tecnologías como Koin, Coil y Supabase.',
+    technologies: ['Compose Multiplatform', 'Kotlin', 'Supabase', 'Koin', 'Clean Architecture'],
+    Icon: BookOpen, // Changed from Puzzle to a more relevant icon for an interactive book
   },
   {
     id: 'lyra',
     name: 'Lyra',
-    description: 'A creative application focusing on audio processing, synthesis, and interactive music generation.',
-    technologies: ['Kotlin', 'Android SDK', 'Audio APIs', 'DSP'],
-    Icon: Waves, // Changed from Waveform to Waves
+    description: 'Aplicación de nutrición en desarrollo, enfocada exclusivamente en Jetpack Compose para Android. Explora funcionalidades para el seguimiento y planificación nutricional.',
+    technologies: ['Jetpack Compose', 'Kotlin', 'Android'],
+    Icon: Scale, // Changed from Waves to a more relevant icon for nutrition
   },
 ];
 
@@ -39,22 +39,22 @@ const learningProjects: Project[] = [
   {
     id: 'squidgame',
     name: 'SquidGame',
-    description: 'A learning project replicating various game mechanics inspired by the popular series, built to explore state management and UI.',
-    technologies: ['Kotlin', 'Jetpack Compose', 'Firebase Realtime DB'],
+    description: 'Proyecto inspirado en "El Juego del Calamar". Consta de una app de control para participantes (Compose Multiplatform para Wasm/Desktop) y una app para jugadores (Jetpack Compose para Android). Se exploraron tecnologías como Koin, Ktor, Firebase Realtime Database, Firebase Firestore y Coil.',
+    technologies: ['Compose Multiplatform', 'Jetpack Compose', 'Kotlin', 'Firebase', 'Ktor', 'Koin'],
     Icon: ToyBrick,
   },
   {
     id: 'adivina_rgb',
     name: 'Adivina el color RGB',
-    description: 'A color guessing game developed to understand RGB color models, user input handling, and dynamic UI updates in Android.',
-    technologies: ['Java', 'Android XML', 'Event Handling'],
+    description: 'Mini-juego desarrollado en Compose Multiplatform para Desktop. El objetivo es adivinar un color RGB, sirviendo como práctica para el manejo de colores en el framework.',
+    technologies: ['Compose Multiplatform', 'Kotlin', 'Desktop'],
     Icon: Palette,
   },
   {
     id: 'dragon_matches',
     name: 'Dragon Matches',
-    description: 'A match-three puzzle game developed to explore game logic, 2D animations, and particle effects using a game framework.',
-    technologies: ['Kotlin', 'LibGDX', '2D Graphics', 'Animation'],
+    description: 'Aplicación inspirada en Tinder con temática de Dragon Ball, desarrollada en Jetpack Compose. Se exploraron tecnologías como Ktor, Koin y Coil, y se aplicó la arquitectura MVVM. Sirvió para practicar el consumo de APIs y animaciones de drag & drop.',
+    technologies: ['Jetpack Compose', 'Kotlin', 'Ktor', 'Koin', 'MVVM', 'Android'],
     Icon: Flame,
   },
 ];
@@ -63,22 +63,22 @@ const webProjects: Project[] = [
   {
     id: 'dany',
     name: 'Dany<3',
-    description: 'A personal web project with a focus on modern frontend design, animations, and delivering an engaging user experience.',
-    technologies: ['HTML5', 'CSS3', 'JavaScript ES6', 'GSAP'],
+    description: 'Página web personal desarrollada con cariño, enfocada en un diseño moderno y una experiencia de usuario atractiva para mi novia.',
+    technologies: ['HTML5', 'CSS3', 'JavaScript'],
     Icon: Heart,
   },
   {
     id: 'eikocolors',
     name: 'EikoColors',
-    description: 'A web tool for designers and developers to explore, generate, and manage color palettes with real-time previews.',
-    technologies: ['React', 'Tailwind CSS', 'Chroma.js', 'Local Storage'],
+    description: 'Herramienta web en desarrollo para una empresa de diseño gráfico, destinada a la exploración y gestión de paletas de colores.',
+    technologies: ['React', 'Tailwind CSS', 'Next.js'], // Assuming modern stack
     Icon: Paintbrush,
   },
   {
     id: 'asian_growth',
     name: 'Asian Growth Timeline',
-    description: 'An interactive data visualization project showcasing historical economic and social growth indicators across Asian countries.',
-    technologies: ['Vue.js', 'D3.js', 'Firebase Firestore', 'Responsive Design'],
+    description: 'Proyecto escolar vendido a un estudiante: una línea de tiempo interactiva que visualiza datos históricos sobre el crecimiento económico y social en países asiáticos.',
+    technologies: ['Vue.js', 'D3.js', 'Data Visualization'], // Assuming relevant tech
     Icon: TrendingUp,
   },
 ];
