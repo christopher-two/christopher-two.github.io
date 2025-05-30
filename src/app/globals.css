@@ -5,100 +5,100 @@
 
 @layer base {
   :root {
-    /* Light Purple Theme */
-    --background: 270 60% 97%; /* Very light lavender */
-    --foreground: 270 30% 15%; /* Dark purple text */
+    /* Light Theme - "The Last of Us" inspired */
+    --background: 150 30% 97%; /* Very light, slightly desaturated green */
+    --foreground: 152 25% 20%; /* Dark, desaturated green text (from #4A7D64) */
 
-    --card: 270 60% 94%; /* Light lavender for Cards */
-    --card-foreground: 270 30% 15%;
+    --card: 150 30% 94%; /* Light, slightly off-white green for Cards */
+    --card-foreground: 152 25% 20%;
 
-    --popover: 270 60% 92%; /* Light lavender for Popovers */
-    --popover-foreground: 270 30% 15%;
+    --popover: 150 30% 92%; /* Light, slightly off-white green for Popovers */
+    --popover-foreground: 152 25% 20%;
 
-    --primary: 270 60% 60%; /* Vibrant Medium Purple (slightly lighter for light mode) */
-    --primary-foreground: 270 15% 95%; /* Very Light Text for Primary Elements */
+    --primary: 152 25% 38%; /* Deep desaturated green (#4A7D64) */
+    --primary-foreground: 150 10% 95%; /* Very Light Text for Primary Elements */
 
-    --secondary: 270 50% 75%; /* Muted Lighter Purple */
-    --secondary-foreground: 270 30% 20%; /* Darker Text for Secondary Elements */
+    --secondary: 152 20% 55%; /* Muted Lighter Green */
+    --secondary-foreground: 152 25% 15%; /* Darker Text for Secondary Elements */
 
-    --muted: 270 30% 88%; /* Light Purple for Muted Elements */
-    --muted-foreground: 270 15% 50%; /* Softer Dark Text for Muted Elements */
+    --muted: 150 25% 88%; /* Light Green-Gray for Muted Elements */
+    --muted-foreground: 152 15% 50%; /* Softer Dark Text for Muted Elements */
 
-    --accent: 290 70% 60%; /* Brighter, Pinkish Purple (slightly lighter for light mode) */
-    --accent-foreground: 270 30% 10%; /* Dark Text for Accent Elements */
+    --accent: 70 64% 48%; /* Pale yellow-green (#B8D430), slightly toned for light mode */
+    --accent-foreground: 70 30% 10%; /* Dark Text for Accent Elements */
 
     --destructive: 0 70% 50%; /* Standard Destructive Red */
     --destructive-foreground: 0 0% 100%;
 
-    --border: 270 30% 80%; /* Light Purple-ish Border */
-    --input: 270 30% 90%; /* Input Background - Light Purple */
-    --ring: 290 70% 60%; /* Accent Color for Rings */
+    --border: 150 20% 80%; /* Light Green-Gray Border */
+    --input: 150 20% 90%; /* Input Background - Light Green-Gray */
+    --ring: 70 64% 51%; /* Accent Color for Rings (#B8D430) */
 
     --radius: 0.5rem;
 
     /* Chart variables for light theme */
     --chart-1: hsl(var(--accent));
     --chart-2: hsl(var(--primary));
-    --chart-3: 270 40% 65%; 
-    --chart-4: 300 50% 70%; 
-    --chart-5: 260 60% 75%; 
+    --chart-3: 152 20% 60%; 
+    --chart-4: 70 50% 70%; 
+    --chart-5: 152 30% 50%; 
     
     /* Sidebar variables for light theme */
-    --sidebar-background: 270 30% 95%;
-    --sidebar-foreground: 270 30% 15%;
+    --sidebar-background: 150 30% 95%;
+    --sidebar-foreground: 152 25% 20%;
     --sidebar-primary: hsl(var(--accent)); 
-    --sidebar-primary-foreground: 270 30% 10%;
+    --sidebar-primary-foreground: 70 30% 10%;
     --sidebar-accent: hsl(var(--primary)); 
-    --sidebar-accent-foreground: 270 15% 95%;
-    --sidebar-border: 270 30% 80%;
+    --sidebar-accent-foreground: 150 10% 95%;
+    --sidebar-border: 150 20% 80%;
     --sidebar-ring: hsl(var(--accent));
   }
 
   .dark {
-    /* Dark Purple Theme (Existing) */
-    --background: 270 30% 10%; 
-    --foreground: 270 15% 85%; 
+    /* Dark Theme - "The Last of Us" inspired */
+    --background: 156 16% 8%; /* Very dark, almost black, desaturated green (#121A16) */
+    --foreground: 150 10% 80%; /* Light, desaturated green/gray text */
 
-    --card: 270 30% 15%; 
-    --card-foreground: 270 15% 85%;
+    --card: 156 16% 12%; /* Slightly lighter than background for Cards */
+    --card-foreground: 150 10% 80%;
 
-    --popover: 270 30% 12%; 
-    --popover-foreground: 270 15% 85%;
+    --popover: 156 16% 10%; /* Darker than card for Popovers */
+    --popover-foreground: 150 10% 80%;
 
-    --primary: 270 60% 55%; 
-    --primary-foreground: 270 15% 95%; 
+    --primary: 152 25% 42%; /* Deep desaturated green (#4A7D64), slightly brightened */
+    --primary-foreground: 150 15% 95%; /* Very Light Text for Primary Elements */
 
-    --secondary: 270 50% 45%; 
-    --secondary-foreground: 270 15% 90%;
+    --secondary: 152 20% 30%; /* Muted, darker version of primary */
+    --secondary-foreground: 150 10% 85%; 
 
-    --muted: 270 30% 20%; 
-    --muted-foreground: 270 15% 60%; 
+    --muted: 156 10% 25%; /* Muted dark green-gray */
+    --muted-foreground: 150 10% 60%; /* Softer Text for Muted Elements */
 
-    --accent: 290 70% 65%; 
-    --accent-foreground: 270 30% 10%; 
+    --accent: 70 64% 51%; /* Pale, contrasting yellow-green (#B8D430) */
+    --accent-foreground: 70 40% 10%; /* Dark Text for Accent Elements */
 
-    --destructive: 0 70% 50%; 
+    --destructive: 0 70% 50%; /* Standard Destructive Red */
     --destructive-foreground: 0 0% 100%;
 
-    --border: 270 30% 25%; 
-    --input: 270 30% 20%; 
-    --ring: 290 70% 65%; 
+    --border: 156 16% 18%; /* Subtle dark border */
+    --input: 156 16% 18%; /* Dark input background */
+    --ring: 70 64% 55%; /* Accent Color for Rings, slightly brighter */
 
     /* Chart variables for dark theme */
     --chart-1: hsl(var(--accent)); 
     --chart-2: hsl(var(--primary)); 
-    --chart-3: 270 40% 35%; 
-    --chart-4: 300 50% 50%; 
-    --chart-5: 260 60% 60%; 
+    --chart-3: 152 20% 30%; 
+    --chart-4: 70 50% 40%; 
+    --chart-5: 152 15% 55%; 
     
     /* Sidebar variables for dark theme */
-    --sidebar-background: 270 30% 12%;
-    --sidebar-foreground: 270 15% 85%;
+    --sidebar-background: 156 16% 10%;
+    --sidebar-foreground: 150 10% 80%;
     --sidebar-primary: hsl(var(--accent)); 
-    --sidebar-primary-foreground: 270 30% 10%;
+    --sidebar-primary-foreground: 70 40% 10%;
     --sidebar-accent: hsl(var(--primary)); 
-    --sidebar-accent-foreground: 270 15% 95%;
-    --sidebar-border: 270 30% 25%;
+    --sidebar-accent-foreground: 150 15% 95%;
+    --sidebar-border: 156 16% 18%;
     --sidebar-ring: hsl(var(--accent));
   }
 }
