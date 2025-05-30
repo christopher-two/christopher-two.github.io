@@ -8,6 +8,7 @@ const PersonalBio = () => {
   const name = "Christopher Alejandro Maldonado Chavez";
   const description = "Un apasionado desarrollador de software con experiencia en desarrollo móvil y multiplataforma. Siempre ansioso por aprender nuevas tecnologías y construir soluciones innovadoras que resuelvan problemas del mundo real. Entusiasta por crear aplicaciones limpias, eficientes y fáciles de usar.";
   const emailAddress = "christopher@override.com.mx";
+  const overrideWebsite = "https://www.override.com.mx";
 
   const contacts = [
     {
@@ -60,9 +61,12 @@ const PersonalBio = () => {
             </Button>
           ))}
         </div>
-        <div className="mt-12 text-center">
+        <div className="mt-12 text-center space-y-2">
           <p className="text-md text-muted-foreground">
             Contacto directo: <a href={`mailto:${emailAddress}`} className="text-accent hover:underline hover:text-accent/80 transition-colors duration-300">{emailAddress}</a>
+          </p>
+          <p className="text-md text-muted-foreground">
+            Empresa: <a href={overrideWebsite} target="_blank" rel="noopener noreferrer" className="text-accent hover:underline hover:text-accent/80 transition-colors duration-300">www.override.com.mx</a>
           </p>
         </div>
       </div>
