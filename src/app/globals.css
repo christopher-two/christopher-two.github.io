@@ -4,88 +4,88 @@
 
 @layer base {
   :root {
-    --background: 150 19% 8%; /* #121A16 */
-    --foreground: 150 15% 85%; /* Light gray for text */
+    --background: 270 30% 10%; /* Dark Desaturated Purple */
+    --foreground: 270 15% 85%; /* Light Cool Grey */
 
-    --card: 150 19% 12%; /* Slightly lighter than background for card elements */
-    --card-foreground: 150 15% 85%;
+    --card: 270 30% 15%; /* Slightly Lighter Dark Purple for Cards */
+    --card-foreground: 270 15% 85%;
 
-    --popover: 150 19% 10%;
-    --popover-foreground: 150 15% 85%;
+    --popover: 270 30% 12%; /* Dark Purple for Popovers */
+    --popover-foreground: 270 15% 85%;
 
-    --primary: 151 25% 39%; /* #4A7D64 Deep, desaturated green */
-    --primary-foreground: 150 15% 95%; /* Lighter text for primary elements */
+    --primary: 270 60% 55%; /* Vibrant Medium Purple */
+    --primary-foreground: 270 15% 95%; /* Very Light Text for Primary Elements */
 
-    --secondary: 151 25% 30%; /* Darker shade of primary */
-    --secondary-foreground: 150 15% 90%;
+    --secondary: 270 50% 45%; /* Muted Darker Purple */
+    --secondary-foreground: 270 15% 90%;
 
-    --muted: 150 19% 15%;
-    --muted-foreground: 150 15% 60%; /* Softer text for muted elements */
+    --muted: 270 30% 20%; /* Dark Purple for Muted Elements */
+    --muted-foreground: 270 15% 60%; /* Softer Text for Muted Elements */
 
-    --accent: 72 65% 51%; /* #B8D430 Pale, contrasting yellow-green */
-    --accent-foreground: 150 19% 8%; /* Dark text for accent elements */
+    --accent: 290 70% 65%; /* Brighter, Pinkish Purple */
+    --accent-foreground: 270 30% 10%; /* Dark Text for Accent Elements */
 
-    --destructive: 0 70% 50%; /* Standard destructive red */
+    --destructive: 0 70% 50%; /* Standard Destructive Red */
     --destructive-foreground: 0 0% 100%;
 
-    --border: 150 19% 20%;
-    --input: 150 19% 15%;
-    --ring: 72 65% 51%; /* Accent color for rings */
+    --border: 270 30% 25%; /* Purple-ish Border */
+    --input: 270 30% 20%; /* Input Background - Dark Purple */
+    --ring: 290 70% 65%; /* Accent Color for Rings */
 
     --radius: 0.5rem;
 
-    /* Chart variables, themed */
-    --chart-1: hsl(var(--accent));
-    --chart-2: hsl(var(--primary));
-    --chart-3: 197 37% 30%; /* Adjusted for dark theme */
-    --chart-4: 43 74% 60%;  /* Adjusted for dark theme */
-    --chart-5: 27 87% 60%;  /* Adjusted for dark theme */
+    /* Chart variables, themed for purple */
+    --chart-1: hsl(var(--accent)); /* Brighter Pinkish Purple */
+    --chart-2: hsl(var(--primary)); /* Vibrant Medium Purple */
+    --chart-3: 270 40% 35%; /* Another Shade of Purple */
+    --chart-4: 300 50% 50%; /* Magenta-like Purple */
+    --chart-5: 260 60% 60%; /* Bluish Purple */
     
-    /* Sidebar variables, themed for consistency */
-    --sidebar-background: 150 19% 10%;
-    --sidebar-foreground: 150 15% 85%;
-    --sidebar-primary: 72 65% 51%;
-    --sidebar-primary-foreground: 150 19% 8%;
-    --sidebar-accent: 151 25% 39%;
-    --sidebar-accent-foreground: 150 15% 95%;
-    --sidebar-border: 150 19% 20%;
-    --sidebar-ring: 72 65% 51%;
+    /* Sidebar variables, themed for purple consistency */
+    --sidebar-background: 270 30% 12%;
+    --sidebar-foreground: 270 15% 85%;
+    --sidebar-primary: hsl(var(--accent)); /* Accent for sidebar primary */
+    --sidebar-primary-foreground: 270 30% 10%;
+    --sidebar-accent: hsl(var(--primary)); /* Primary for sidebar accent */
+    --sidebar-accent-foreground: 270 15% 95%;
+    --sidebar-border: 270 30% 25%;
+    --sidebar-ring: hsl(var(--accent));
   }
 
   /* Apply the same variables for .dark if explicit .dark class is used elsewhere or by libraries */
   .dark {
-    --background: 150 19% 8%;
-    --foreground: 150 15% 85%;
-    --card: 150 19% 12%;
-    --card-foreground: 150 15% 85%;
-    --popover: 150 19% 10%;
-    --popover-foreground: 150 15% 85%;
-    --primary: 151 25% 39%;
-    --primary-foreground: 150 15% 95%;
-    --secondary: 151 25% 30%;
-    --secondary-foreground: 150 15% 90%;
-    --muted: 150 19% 15%;
-    --muted-foreground: 150 15% 60%;
-    --accent: 72 65% 51%;
-    --accent-foreground: 150 19% 8%;
+    --background: 270 30% 10%;
+    --foreground: 270 15% 85%;
+    --card: 270 30% 15%;
+    --card-foreground: 270 15% 85%;
+    --popover: 270 30% 12%;
+    --popover-foreground: 270 15% 85%;
+    --primary: 270 60% 55%;
+    --primary-foreground: 270 15% 95%;
+    --secondary: 270 50% 45%;
+    --secondary-foreground: 270 15% 90%;
+    --muted: 270 30% 20%;
+    --muted-foreground: 270 15% 60%;
+    --accent: 290 70% 65%;
+    --accent-foreground: 270 30% 10%;
     --destructive: 0 70% 50%;
     --destructive-foreground: 0 0% 100%;
-    --border: 150 19% 20%;
-    --input: 150 19% 15%;
-    --ring: 72 65% 51%;
+    --border: 270 30% 25%;
+    --input: 270 30% 20%;
+    --ring: 290 70% 65%;
     --chart-1: hsl(var(--accent));
     --chart-2: hsl(var(--primary));
-    --chart-3: 197 37% 30%;
-    --chart-4: 43 74% 60%;
-    --chart-5: 27 87% 60%;
-    --sidebar-background: 150 19% 10%;
-    --sidebar-foreground: 150 15% 85%;
-    --sidebar-primary: 72 65% 51%;
-    --sidebar-primary-foreground: 150 19% 8%;
-    --sidebar-accent: 151 25% 39%;
-    --sidebar-accent-foreground: 150 15% 95%;
-    --sidebar-border: 150 19% 20%;
-    --sidebar-ring: 72 65% 51%;
+    --chart-3: 270 40% 35%;
+    --chart-4: 300 50% 50%;
+    --chart-5: 260 60% 60%;
+    --sidebar-background: 270 30% 12%;
+    --sidebar-foreground: 270 15% 85%;
+    --sidebar-primary: hsl(var(--accent));
+    --sidebar-primary-foreground: 270 30% 10%;
+    --sidebar-accent: hsl(var(--primary));
+    --sidebar-accent-foreground: 270 15% 95%;
+    --sidebar-border: 270 30% 25%;
+    --sidebar-ring: hsl(var(--accent));
   }
 }
 
