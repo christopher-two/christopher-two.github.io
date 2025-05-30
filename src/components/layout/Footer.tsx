@@ -5,7 +5,7 @@ const Footer = () => {
       <div className="container mx-auto text-center text-muted-foreground">
         <p className="text-sm">&copy; {new Date().getFullYear()} Christopher Alejandro Maldonado Chavez. Todos los derechos reservados.</p>
         <p className="text-xs mt-2">
-          Inspirado en un diseño minimalista y un toque de la atmósfera de The Last of Us.
+          Con cariño &lt;3
         </p>
       </div>
     </footer>
