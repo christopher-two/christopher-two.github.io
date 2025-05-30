@@ -23,7 +23,7 @@ const PersonalBio = () => {
     },
     {
       name: 'GitHub',
-      href: 'https://github.com/christopher-maldonado', // Placeholder - Reemplazar con tu perfil real
+      href: 'https://github.com/christopher-two', 
       icon: Github,
       ariaLabel: 'Visitar el perfil de GitHub de Christopher',
     },
