@@ -18,14 +18,14 @@ const showcaseProjects: Project[] = [
     name: 'Quickness',
     description: 'Aplicación de gestión de accesos desarrollada para Override. Responsable del frontend con Compose Multiplatform (Android/iOS), implementando arquitectura MVVM, multimodularidad, Clean Architecture y modelo de capas. Se utilizaron tecnologías como Ktor, Koin, Coil, Room, DataStore, KSP, Moko Permissions, Biometric y Firebase (Auth, Firestore, Cloud Run Functions).',
     technologies: ['Compose Multiplatform', 'Kotlin', 'Ktor', 'Firebase', 'Clean Architecture', 'MVVM'],
-    Icon: 'https://override.com.mx/SRC/IMG/logo/LogoQuicknessQC.svg', // Updated Icon
+    Icon: 'https://override.com.mx/SRC/IMG/logo/LogoQuicknessQC.svg',
   },
   {
     id: 'calabozos',
     name: 'Calabozos y compuertas',
     description: 'Libro interactivo desarrollado para Override utilizando Compose Multiplatform. Se aplicaron arquitecturas multimodular, modelo de capas, MVVM y Clean Architecture, con tecnologías como Koin, Coil y Supabase.',
     technologies: ['Compose Multiplatform', 'Kotlin', 'Supabase', 'Koin', 'Clean Architecture'],
-    Icon: BookOpen,
+    Icon: 'https://override.com.mx/SRC/IMG/logo/Logo%20Odin.svg', // Updated Icon
   },
   {
     id: 'lyra',
