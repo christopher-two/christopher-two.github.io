@@ -3,15 +3,10 @@
 
 import Link from 'next/link';
 import { useState } from 'react';
-import { Menu, X, Globe } from 'lucide-react'; 
+import { Menu, X } from 'lucide-react'; 
 import { Button } from '@/components/ui/button';
-import { Sheet, SheetContent, SheetTrigger, SheetClose, SheetTitle } from '@/components/ui/sheet'; // Added SheetTitle
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from '@/components/ui/dropdown-menu';
+import { Sheet, SheetContent, SheetTrigger, SheetClose, SheetTitle } from '@/components/ui/sheet';
+import { ThemeToggle } from './ThemeToggle'; // Importar el nuevo componente
 
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -35,21 +30,25 @@ const Header = () => {
           <span>Christopher-Two</span>
         </Link>
         
-        {/* Desktop Navigation */}
-        <nav className="hidden md:flex space-x-6 items-center">
-          {navLinks.map((link) => (
-            <Link 
-              key={link.href} 
-              href={link.href} 
-              className="text-muted-foreground hover:text-accent transition-colors"
-            >
-              {link.label}
-            </Link>
-          ))}
-        </nav>
+        {/* Desktop Navigation & Theme Toggle */}
+        <div className="hidden md:flex items-center space-x-6">
+          <nav className="flex space-x-6">
+            {navLinks.map((link) => (
+              <Link 
+                key={link.href} 
+                href={link.href} 
+                className="text-muted-foreground hover:text-accent transition-colors"
+              >
+                {link.label}
+              </Link>
+            ))}
+          </nav>
+          <ThemeToggle />
+        </div>
 
-        {/* Mobile Navigation */}
-        <div className="md:hidden">
+        {/* Mobile Navigation Trigger & Theme Toggle */}
+        <div className="md:hidden flex items-center gap-2">
+          <ThemeToggle />
           <Sheet open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
             <SheetTrigger asChild>
               <Button variant="ghost" size="icon">
